@@ -33,18 +33,18 @@ input.underline {
     margin: 100px;
 }
 .login-text {
-    font-size: 35px;
+    font-size: 30px;
     font-weight: bold;
     position: relative;
     font-family: "YdestreetB";
-    margin: 0 0 30px 0;
+    margin: 10% 0 15px 0;
     cursor: default;
 }
 .inner label {
     font-size: 20px;
     position: absolute;
     z-index: 1;
-    margin: 20px 0 0 260px;
+    margin: 20px 0 0 250px;
     font-family: "Pretendard";  
     font-weight: 500;
     color: #76787F;
@@ -52,13 +52,13 @@ input.underline {
 }
 .inner input {
     position: relative;
-    width: 400px;
+    width: 360px;
     height: 60px;
-    padding: 0 0 0 25px;
-    margin: 0 0 75px 0;
+    margin: 0 0 50px 0;
     font-family: "Pretendard";
     font-weight: bold;
     font-size: 20px;
+    padding: 4px;
 }
 .inner input.underline {
     box-sizing: border-box;
@@ -75,19 +75,19 @@ input.underline {
     font-weight: bold;
     color: #fff;
     font-family: "Pretendard";
-    width: 200px;
+    width: 250px;
     height: 60px;
     border-radius: 20px;
     cursor: pointer;
     font-size: 30px;
-    margin: 0 0 0 25%;
+    margin: 60px 0 0 15%;
 }
 .inner .signup-text {
     font-family: "Pretendard";
     color: #808080;
-    font-size: 25px;
+    font-size: 15px;
     font-weight: bold;
-    margin: 70px 0 0 0;
+    margin: 30px 0 0 20%;
 }
 .inner .signup-text .sub-text {
     cursor: default;
