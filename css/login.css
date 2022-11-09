@@ -3,6 +3,8 @@ body {
     padding: 0;
     margin: 0;
     background-color: #fff;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 @font-face {
     font-family: YdestreetB;
@@ -95,9 +97,14 @@ input.underline {
     color: #FFC033;
 }
 
+.login-image-box {
+    position: absolute;
+    margin-top: 0px;
+    margin-left: 650px;
+    margin-bottom: 0px;
+}
 .login-image {  
-    position: relative;
-    width: 1100px;
-    height: 1000px;
-    margin: 0 0 20px 600px;
+    position: absolute;
+    width: 900px;
+    height: 722px;
 }

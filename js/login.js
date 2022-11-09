@@ -1,3 +1,13 @@
+window.onfocus = function () {
+
+}
+window.onload = function () {
+	window.focus();
+	window.moveTo(0, 0);
+	window.resizeTo(1920, 1080);
+	window.scrollTo(0, 250);
+}
+
 /* Id type */
 function CheckId(str)
 {
