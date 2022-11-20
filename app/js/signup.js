@@ -13,7 +13,7 @@ function CheckId(str)
 function GoToEnroll()
 {
 
-	var obId = document.getElementById("id");
+	let obId = document.getElementById("id");
 	if (!obId.value) {
 		alert("아이디을 입력해주십시오.");
 		obId.focus();
@@ -31,9 +31,9 @@ function GoToEnroll()
 /* Password accord check */
 function check_pw(){
  
-    var pw = document.getElementById('pw').value;
-    var SC = ["!","@","#","$","%", "*"];
-    var check_SC = 0;
+    let pw = document.getElementById('pw').value;
+    let SC = ["!","@","#","$","%", "*"];
+    let check_SC = 0;
 
     if(pw.length < 6 || pw.length>16){
         window.alert('비밀번호는 6글자 이상, 16글자 이하만 이용 가능합니다.');
@@ -59,3 +59,17 @@ function check_pw(){
         }
     }
 }
+
+
+/* modal open */
+const open = () => {
+    document.querySelector(".modal").classList.remove("hidden");
+  }
+
+  const close = () => {
+    document.querySelector(".modal").classList.add("hidden");
+  }
+
+  document.querySelector(".openBtn").addEventListener("click", open);
+  document.querySelector(".closeBtn").addEventListener("click", close);
+  document.querySelector(".bg").addEventListener("click", close);

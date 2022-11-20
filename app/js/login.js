@@ -1,7 +1,7 @@
 /* Id type */
 function CheckId(str)
 {
-	var reg_id = /[s][0-9][0-9][0][0-9][0-9]/;
+	let reg_id = /[s][0-9][0-9][0][0-9][0-9]/;
     if(!reg_id.test(str)) {
         return false;
     }
@@ -13,7 +13,7 @@ function CheckId(str)
 function GoToEnroll()
 {
 
-	var obId = document.getElementById("id");
+	let obId = document.getElementById("id");
 	if (!obId.value) {
 		alert("아이디을 입력해주십시오.");
 		obId.focus();

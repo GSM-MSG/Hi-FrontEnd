@@ -76,7 +76,7 @@
     <div class="inner">
         <div class="login-box">
           <div class="login-text">
-            <h1>LOGIN</h1>
+            <h1>SIGN UP</h1>
           </div>
           <div class="input-text">
             <label for="id">@gsm.hs.kr</label>
@@ -90,13 +90,18 @@
             <span id="check"></span>
           </div>
           <a href="void:javascript(0)">
-            <button OnClick = "javascript:GoToEnroll()">회원가입</button>
+            <button OnClick = "javascript:GoToEnroll()" class="openBtn">회원가입</button>
           </a>
-          <div class="signup-text">
-            <a class="sub-text">계정이 없으신가요?</a>
-            <button class="openBtn">로그인</button>
-            <!-- <a href="./index.html" class="text-hyper">로그인</a> -->
+          <div class="modal hidden">
+            <div class="bg"></div>
+            <div class="modalBox">
 
+              <button class="closeBtn">확인</button>
+            </div>
+          </div>
+          <div class="signup-text">
+            <a class="sub-text">계정이 있으신가요?</a>
+            <a href="./index.html" class="text-hyper">로그인</a>
           </div>
         </div>
       </div>
