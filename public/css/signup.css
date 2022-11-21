@@ -127,6 +127,11 @@ button {
     justify-content: center;
     align-items: center;
 }
+.modal .check-text {
+    font-family: "Pretendard";
+    font-weight: bold;
+    font-size: 40px;
+}
 .modal .bg {
     z-index: 3;
     width: 100%;
@@ -135,10 +140,12 @@ button {
 }
 .modalBox {
     z-index: 3;
+    border-radius: 100;
     position: absolute;
-    background-color: #fff;
-    width: 400px;
-    height: 200px;
+    border-radius: 100;
+    background-color: #FAFAFA;
+    width: 520px;
+    height: 390px;
     padding: 15px;
 }
 .modalBox button {
