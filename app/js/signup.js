@@ -29,14 +29,17 @@ function GoToEnroll()
 }
 
 /* Password accord check */
+let target = document.getElementById("pw");
+let target2 = document.getElementById("pw2");
+
 function check_pw(){
  
     let pw = document.getElementById('pw').value;
     let SC = ["!","@","#","$","%", "*"];
     let check_SC = 0;
 
-    if(pw.length < 6 || pw.length>16){
-        window.alert('비밀번호는 6글자 이상, 16글자 이하만 이용 가능합니다.');
+    if(pw.length < 8 || pw.length > 16){
+        window.alert('비밀번호는 8글자 이상, 16글자 이하만 이용 가능합니다.');
         document.getElementById('pw').value='';
     }
     for(var i=0;i<SC.length;i++){
@@ -50,10 +53,14 @@ function check_pw(){
     }
     if(document.getElementById('pw').value !='' && document.getElementById('pw2').value!=''){
         if(document.getElementById('pw').value==document.getElementById('pw2').value){
+            target.style.borderBottom = "3px solid blue";
+            target2.style.borderBottom = "3px solid blue";
             document.getElementById('check').innerHTML='비밀번호가 일치합니다.'
             document.getElementById('check').style.color='blue';
         }
         else{
+            target.style.borderBottom = "3px solid red";
+            target2.style.borderBottom = "3px solid red";
             document.getElementById('check').innerHTML='비밀번호가 일치하지 않습니다.';
             document.getElementById('check').style.color='red';
         }
@@ -64,12 +71,12 @@ function check_pw(){
 /* modal open */
 const open = () => {
     document.querySelector(".modal").classList.remove("hidden");
-  }
+}
 
-  const close = () => {
+const close = () => {
     document.querySelector(".modal").classList.add("hidden");
-  }
+}
 
-  document.querySelector(".openBtn").addEventListener("click", open);
-  document.querySelector(".closeBtn").addEventListener("click", close);
-  document.querySelector(".bg").addEventListener("click", close);
+document.querySelector(".openBtn").addEventListener("click", open);
+document.querySelector(".closeBtn").addEventListener("click", close);
+document.querySelector(".bg").addEventListener("click", close);

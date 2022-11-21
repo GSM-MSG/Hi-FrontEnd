@@ -96,6 +96,13 @@ input.underline {
 .inner .signup-text .text-hyper {
     color: #FFC033;
 }
+.inner .input-password .password-check {
+    z-index: 2;
+    font-size: 15px;
+    font-family: "Pretendard";
+    font-weight: bold;
+    cursor: default;
+}
 
 .login-image-box {
     position: absolute;
@@ -133,11 +140,7 @@ button {
     margin-top: 40px;
     margin-left: 10px;
     font-size: 25px;
-}
-.modal .sub-text {
-    font-family: "Pretendard";
-    color: #999;
-    margin-left: 10px;
+    cursor: default;
 }
 .modal .sub-text {
     font-family: "Pretendard";
@@ -146,6 +149,7 @@ button {
     font-weight: 500;
     margin-left: 12px;
     margin-top: 10px;
+    cursor: default;
 }
 .modal .number-check input {
     align-items: center;
@@ -192,15 +196,18 @@ button {
     text-align: center;
 }
 .modalBox .resend-text {
+    cursor: none;
     margin-top: 5%;
 }
 .modalBox .cant-text {
+    cursor: none;
     margin-left: 26%;
     color: #808080; 
     font-size: 15px;
     font-weight: bold;
 }
 .modalBox .text-hyper {
+    cursor: none;
     font-size: 15px;
     font-weight: bold;
     text-decoration: none;
