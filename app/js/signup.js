@@ -1,7 +1,7 @@
 /* Id type */
 function CheckId(str)
 {
-	var reg_id = /[s][0-9][0-9][0][0-9][0-9]/;
+	let reg_id = /[s][0-9][0-9][0][0-9][0-9]/;
     if(!reg_id.test(str)) {
         return false;
     }
@@ -80,3 +80,23 @@ const close = () => {
 document.querySelector(".openBtn").addEventListener("click", open);
 document.querySelector(".closeBtn").addEventListener("click", close);
 document.querySelector(".bg").addEventListener("click", close);
+
+
+/* modal number check */
+
+const onChange = (event) => {
+    console.log(event.target.value)
+    if(event.target.value >= 0 && event.target.value <= 9) {
+        event.target.style.border = "1px solid #FFDF9A"
+        event.target.style.backgroundColor = "#fff"
+        return true;
+    }
+    return false;
+}
+
+let num1 = document.querySelector(".num1").addEventListener("change", onChange);
+let num2 = document.querySelector(".num2").addEventListener("change", onChange);
+let num3 = document.querySelector(".num3").addEventListener("change", onChange);
+let num4 = document.querySelector(".num4").addEventListener("change", onChange);
+
+// numInput.addEventListener("change");/
