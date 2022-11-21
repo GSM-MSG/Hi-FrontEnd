@@ -87,7 +87,7 @@
           </div>
           <div class="input-password">
             <input class="underline" type="password" name="userPW2" id="pw2" onchange="check_pw()" maxlength="18" placeholder="비밀번호 확인" />
-            <span id="check"></span>
+            <span id="check" class="password-check"></span>
           </div>
           <a href="void:javascript(0)">
             <button OnClick = "javascript:GoToEnroll()" class="openBtn">회원가입</button>
@@ -101,14 +101,22 @@
               <div class="sub-text">
                 <p>알려주신 이메일로 인증번호를 보냈어요!</p>
               </div>
-              <a class="sub-text">인증번호를 받지 못했나요?</a>
-              <a href="javascript:void(0)" class="text-hyper">재발송</a>
+              <div class="number-check">
+                <input type="text" maxlength="1" id="checkNumber" class="border-line" />
+                <input type="text" maxlength="1" id="checkNumber" class="border-line" />
+                <input type="text" maxlength="1" id="checkNumber" class="border-line" />
+                <input type="text" maxlength="1" id="checkNumber" class="border-line" />
+              </div>
               <button class="closeBtn">확인 </button>
+              <div class="resend-text">
+                <a class="cant-text">인증번호를 받지 못했나요?</a>
+                <a href="javascript:void(0)" class="text-hyper">재발송</a>
+              </div>
             </div>
           </div>
           <div class="signup-text">
             <a class="sub-text">계정이 있으신가요?</a>
-            <a href="./index.html" class="text-hyper">로그인</a>
+            <a href="../../public/html/index.html " class="text-hyper">로그인</a>
           </div>
         </div>
       </div>
