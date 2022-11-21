@@ -42,7 +42,6 @@ input.underline {
     cursor: default;
 }
 .inner label {
-    font-size: 20px;
     position: absolute;
     z-index: 1;
     margin: 20px 0 0 250px;
@@ -96,7 +95,9 @@ input.underline {
 .inner .signup-text .text-hyper {
     color: #FFC033;
 }
-.inner .input-password .password-check {
+.inner .password-check {
+    position: absolute;
+    width: auto;
     z-index: 2;
     font-size: 15px;
     font-family: "Pretendard";
