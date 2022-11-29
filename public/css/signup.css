@@ -112,7 +112,7 @@ input.underline {
     margin-bottom: 0px;
 }
 .login-image {  
-    position: absolute;
+    position: absolute; 
     width: 900px;
     height: 722px;
 }
