@@ -28,6 +28,7 @@ function GoToEnroll()
 	}
 }
 
+
 /* Password accord check */
 let target = document.getElementById("pw");
 let target2 = document.getElementById("pw2");
@@ -83,7 +84,6 @@ document.querySelector(".bg").addEventListener("click", close);
 
 
 /* modal number check */
-
 const onChange = (event) => {
     console.log(event.target.value)
     if(event.target.value >= 0 && event.target.value <= 9) {
