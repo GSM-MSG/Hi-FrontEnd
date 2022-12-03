@@ -107,14 +107,14 @@ input.underline {
 
 .login-image-box {
     position: absolute;
-    margin-top: 0px;
+    margin-top: 2%;
     margin-left: 650px;
     margin-bottom: 0px;
 }
 .login-image {  
-    position: absolute; 
-    width: 900px;
-    height: 722px;
+    position: absolute;
+    width: 800px;
+    height: auto;
 }
 
 /* modal */
