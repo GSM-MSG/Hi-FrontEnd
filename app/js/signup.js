@@ -54,10 +54,10 @@ function check_pw(){
     }
     if(document.getElementById('pw').value !='' && document.getElementById('pw2').value!=''){
         if(document.getElementById('pw').value==document.getElementById('pw2').value){
-            target.style.borderBottom = "3px solid blue";
-            target2.style.borderBottom = "3px solid blue";
+            target.style.borderBottom = "3px solid black";
+            target2.style.borderBottom = "3px solid black";
             document.getElementById('check').innerHTML='비밀번호가 일치합니다.'
-            document.getElementById('check').style.color='blue';
+            document.getElementById('check').style.color='black';
         }
         else{
             target.style.borderBottom = "3px solid red";
