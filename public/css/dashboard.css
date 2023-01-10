@@ -1,0 +1,58 @@
+/* VISUAL */
+body {
+    background-color: #F2F2F2;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+@font-face {
+    font-family: 'GmarketSans';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* Tab Bar */
+.tabBar {
+    position: fixed;
+    width: 250px;
+    height: 100vh;
+    background-color: #fff;
+    padding: 0;
+}
+.fontLogo {
+    display: flex;
+    margin: 20px 3vh;
+    align-items: center;
+}
+
+
+/* Title */
+.title {
+    font-family: "GmarketSans";
+    font-weight: bolder;
+    font-size: 25px;
+    margin-left: 340px;
+    margin-top: 100px;
+}
+
+
+/* Dash Board */
+.dashBoard {
+    position: absolute;
+    margin: 30px 0 0 340px;
+    font-family: "GmarketSans";
+    font-weight: bolder;
+    font-size: 30px;
+}
+.notice {
+    background-color: #F4BD55;
+    width: 150vh;
+    height: 20vh;
+    color: #fff;
+    border-radius: 10px;
+    margin-top: 60px;
+    padding: 20px;
+}

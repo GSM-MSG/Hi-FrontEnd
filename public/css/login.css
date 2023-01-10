@@ -63,7 +63,7 @@ input.underline {
 }
 .inner input.underline {
     box-sizing: border-box;
-    border-bottom: 3px solid #999;
+    border-bottom: 3px solid #000;
     border-collapse: collapse;
 }
 .inner input.underline:focus {
