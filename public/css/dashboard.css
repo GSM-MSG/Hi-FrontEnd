@@ -3,8 +3,8 @@ body {
     background-color: #F2F2F2;
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
-    overflow-y: hidden;
+    /* overflow-x: hidden;
+    overflow-y: hidden; */
 }
 @font-face {
     font-family: 'GmarketSans';
@@ -29,20 +29,20 @@ body {
 }
 
 
-/* Title */
+/* topline */
 .title {
+    position: absolute;
     font-family: "GmarketSans";
     font-weight: bolder;
     font-size: 25px;
     margin-left: 340px;
-    margin-top: 100px;
+    margin-top: 30px;
 }
-
 
 /* Dash Board */
 .dashBoard {
     position: absolute;
-    margin: 30px 0 0 340px;
+    margin: 50px 0 0 340px;
     font-family: "GmarketSans";
     font-weight: bolder;
     font-size: 30px;
@@ -55,4 +55,50 @@ body {
     border-radius: 10px;
     margin-top: 60px;
     padding: 20px;
+}
+.themaImg {
+    margin-left: 620px;
+    top: -110px;
+    position: absolute;
+    z-index: 1;
+}
+
+/* HomeBaseRervation */
+.homebaseRervation {
+    position: absolute;
+    border-radius: 10px;
+    margin-left: 340px;
+    margin-top: 320px;
+}
+.homebaseRervation h1 {
+    font-family: "GmarketSans";
+    font-weight: 900;
+    font-size: 25px;
+}
+.homebaseRervation .themaBox {
+    background-color: #fff;
+    margin-top: 20px;
+    width: 85vh;
+    height: 45vh;
+    border-radius: 10px;
+}
+
+
+/* Date */
+.date {
+    position: absolute;
+    margin-left: 1000px;
+    margin-top: 320px;
+}
+.date h1 {
+    font-family: "GmarketSans";
+    font-weight: 900;
+    font-size: 25px;
+}
+.date .themaBox {
+    background-color: #fff;
+    margin-top: 20px;
+    width: 64vh;
+    height: 45vh;
+    border-radius: 10px;
 }
