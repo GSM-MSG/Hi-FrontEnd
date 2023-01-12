@@ -29,14 +29,68 @@ body {
 }
 
 
-/* topline */
-.title {
+/* header */
+header .title {
     position: absolute;
     font-family: "GmarketSans";
     font-weight: bolder;
     font-size: 25px;
     margin-left: 340px;
     margin-top: 30px;
+}
+header .imgBox {
+    position: absolute;
+    margin-left: 1300px;
+}
+header .imgBox svg:first-child {
+    position: absolute;
+    margin-top: 40px;
+}
+header .imgBox svg:last-child {
+    margin-top: 20px;
+    margin-left: 70px;
+}
+
+.modal {
+    z-index: 3;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    margin-left: 1220px;
+    margin-top: 90px;
+}
+.modal .check-text {
+    font-family: "Pretendard";
+    font-weight: bold;
+    margin-top: 40px;
+    margin-left: 10px;
+    font-size: 25px;
+    cursor: default;
+}
+.modal .bg {
+    width: 100%;
+    height: 100%;
+}
+.modalBox {
+    position: absolute;
+    background-color: #fff;
+    width: 212px;
+    height: 160px;
+    padding: 15px;
+    border-radius: 10px;
+}
+.hidden {
+    display: none;
+}
+
+
+.openProfile {
+    cursor: pointer;
+    background-color: red;
+    height: 100px;
 }
 
 /* Dash Board */
