@@ -16,15 +16,15 @@ body {
 
 /* Tab Bar */
 .tabBar {
-    position: fixed;
-    width: 250px;
+    position: absolute;
+    width: 40vh;
     height: 100vh;
     background-color: #fff;
     padding: 0;
 }
 .fontLogo {
     display: flex;
-    margin: 20px 3vh;
+    margin: 3vh 5vh;
     align-items: center;
 }
 
@@ -34,72 +34,33 @@ header .title {
     position: absolute;
     font-family: "GmarketSans";
     font-weight: bolder;
-    font-size: 25px;
-    margin-left: 340px;
-    margin-top: 30px;
+    font-size: 1.6rem;
+    margin-left: 47vh;
+    margin-top: 5vh;
 }
 header .imgBox {
     position: absolute;
-    margin-left: 1300px;
+    margin-left: 180vh;
 }
 header .imgBox svg:first-child {
     position: absolute;
-    margin-top: 40px;
+    margin-top: 4vh;
+    width: 5vh;
 }
 header .imgBox svg:last-child {
-    margin-top: 20px;
-    margin-left: 70px;
-}
-
-.modal {
-    z-index: 3;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    margin-left: 1220px;
-    margin-top: 90px;
-}
-.modal .check-text {
-    font-family: "Pretendard";
-    font-weight: bold;
-    margin-top: 40px;
-    margin-left: 10px;
-    font-size: 25px;
-    cursor: default;
-}
-.modal .bg {
-    width: 100%;
-    height: 100%;
-}
-.modalBox {
     position: absolute;
-    background-color: #fff;
-    width: 212px;
-    height: 160px;
-    padding: 15px;
-    border-radius: 10px;
-}
-.hidden {
-    display: none;
-}
-
-
-.openProfile {
-    cursor: pointer;
-    background-color: red;
-    height: 100px;
+    margin-top: 1.5vh;
+    margin-left: 9vh;
+    width: 13vh;
 }
 
 /* Dash Board */
 .dashBoard {
     position: absolute;
-    margin: 50px 0 0 340px;
+    margin: 8vh 0 0 47vh;
     font-family: "GmarketSans";
     font-weight: bolder;
-    font-size: 30px;
+    font-size: 1.8rem;
 }
 .notice {
     background-color: #F4BD55;
@@ -107,31 +68,32 @@ header .imgBox svg:last-child {
     height: 20vh;
     color: #fff;
     border-radius: 10px;
-    margin-top: 60px;
+    margin-top: 6vh;
     padding: 20px;
 }
 .themaImg {
-    margin-left: 620px;
-    top: -110px;
-    position: absolute;
+    margin-left: 90vh;
+    top: -48vh;
+    position: relative;
     z-index: 1;
+    width: 40vh;
 }
 
 /* HomeBaseRervation */
 .homebaseRervation {
     position: absolute;
     border-radius: 10px;
-    margin-left: 340px;
-    margin-top: 320px;
+    margin-left: 47vh;
+    margin-top: 45vh;
 }
 .homebaseRervation h1 {
     font-family: "GmarketSans";
     font-weight: 900;
-    font-size: 25px;
+    font-size: 1.5rem;
 }
 .homebaseRervation .themaBox {
     background-color: #fff;
-    margin-top: 20px;
+    margin-top: 3vh;
     width: 85vh;
     height: 45vh;
     border-radius: 10px;
@@ -141,13 +103,13 @@ header .imgBox svg:last-child {
 /* Date */
 .date {
     position: absolute;
-    margin-left: 1000px;
-    margin-top: 320px;
+    margin-left: 139vh;
+    margin-top: 45vh;
 }
 .date h1 {
     font-family: "GmarketSans";
     font-weight: 900;
-    font-size: 25px;
+    font-size: 1.5rem;
 }
 .date .themaBox {
     background-color: #fff;
