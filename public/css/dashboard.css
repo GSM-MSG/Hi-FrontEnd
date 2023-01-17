@@ -16,7 +16,7 @@ body {
 
 /* Tab Bar */
 .tabBar {
-    position: absolute;
+    position: fixed;
     width: 40vh;
     height: 100vh;
     background-color: #fff;
@@ -24,8 +24,21 @@ body {
 }
 .fontLogo {
     display: flex;
-    margin: 3vh 5vh;
+    margin-top: 3vh;
     align-items: center;
+    width: 100%;
+}
+.tabIcon {
+    padding-left: 5.5vh;
+}
+.btnLine {
+    margin-top: 4vh;
+}
+.onPageMark {
+    background-color: #FFB001;
+    width: 10px;
+    height: 48px;
+    float: right;
 }
 
 
