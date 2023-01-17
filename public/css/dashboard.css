@@ -85,7 +85,7 @@ button {
     width: 28vh;
     height: 23vh;
     border-radius: 10px;
-    margin-left: 174.5vh;
+    margin-left: 174.1vh;
     margin-top: 13vh;
     padding: 0.2vh;
 }
@@ -95,23 +95,23 @@ button {
     border-bottom: 1.5px solid #999;
 }
 .modalBox .individual svg {
-    margin: 1vh;
+    margin: 2.3vh 1.2vh;
     display: flex;
     float: left;
 }
 .modalBox .individual table {
-    margin: 1.3vh;
+    margin: 2.3vh 1.2vh;
     display: flex;
     float: right;
     font-family: "GmarketSans";
 }
 .name {
     font-weight: bold;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     margin-left: 0;
 }
 .num {
-    font-size: 0.8rem;
+    font-size: 1rem;
     color: #999;
 }
 .email {
@@ -129,7 +129,14 @@ button {
 .marginBox {
     height: 5px;
 }
-
+.menu svg {
+    margin-top: 1vh;
+    margin-left: 1.5vh;
+    cursor: pointer;
+}
+.menu svg:first-child {
+    margin-top: 2vh;
+}
 
 
 /* Dash Board */
