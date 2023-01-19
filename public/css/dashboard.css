@@ -12,6 +12,9 @@ body {
     font-weight: normal;
     font-style: normal;
 }
+h1 {
+    cursor: default;
+}
 
 
 /* Tab Bar */
@@ -200,7 +203,7 @@ button {
 
 
 /* Date */
-.date {
+.date { 
     position: absolute;
     margin-left: 139vh;
     margin-top: 45vh;
