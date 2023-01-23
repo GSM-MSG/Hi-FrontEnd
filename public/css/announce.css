@@ -1,0 +1,45 @@
+/* VISUAL */
+body {
+    background-color: #F2F2F2;
+    margin: 0;
+    padding: 0;
+    /* overflow-x: hidden;
+    overflow-y: hidden; */
+}
+@font-face {
+    font-family: 'GmarketSans';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+h1 {
+    cursor: default;
+}
+
+
+/* Tab Bar */
+.tabBar {
+    position: fixed;
+    width: 40vh;
+    height: 100vh;
+    background-color: #fff;
+    padding: 0;
+}
+.fontLogo {
+    display: flex;
+    margin-top: 3vh;
+    align-items: center;
+    width: 100%;
+}
+.tabIcon {
+    padding-left: 5.5vh;
+}
+.btnLine {
+    margin-top: 4vh;
+}
+.onPageMark {
+    background-color: #FFB001;
+    width: 10px;
+    height: 48px;
+    float: right;
+}
