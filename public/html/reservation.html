@@ -44,6 +44,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
 
     <link rel="stylesheet" href="/public/css/dashboard.css" />
+    <link rel="stylesheet" href="/public/css/reservation.css">
 
     <script defer src="/app/js/dashboard.js"></script>
 
@@ -90,6 +91,38 @@
             </a> 
         </div>
     </div>
+    
+    <header>
+        <div class="title">
+            <h1 class="divtext">Homebase!</h1>
+        </div>       
+    </header>
+    
+    <div class="names">
+        <b>팀원이름</b>
+        <label>(본인포함)</label> <br />
+        <input type="text" />
+    </div>
+
+    <div class="location">
+        <h1>신청 시간, 위치</h1>
+        <select name="date" id="date-select">
+            <option value="date">2022.12.21</option>
+        </select>
+        <select name="level" id="level-select">
+            <option value="2f">2F</option>
+            <option value="3f">3F</option>
+            <option value="4f">4F</option>
+        </select>
+        <select name="time" id="time-select">
+            <option value="8period">8교시</option>
+            <option value="9period">9교시</option>
+            <option value="10period">10교시</option>
+            <option value="11period">11교시</option>
+        </select>
+    </div>
+
+    <button>신청하기</button>
 
 </body>
 </html>
