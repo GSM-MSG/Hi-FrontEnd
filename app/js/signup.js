@@ -35,71 +35,88 @@ function GoToEnroll()
 }
 
 
-    /* Password accord check */
-    let target = document.getElementById("pw");
-    let target2 = document.getElementById("pw2");
+/* Password accord check */
+let target = document.getElementById("pw");
+let target2 = document.getElementById("pw2");
 
-    async function check_pw(){
-    
-        let pw = document.getElementById('pw').value;
-        let SC = ["!","@","#","$","%", "*"];
-        let check_SC = 0;
+async function check_pw(){
 
-        if(pw.length < 8 || pw.length > 16){
-            window.alert('비밀번호는 8글자 이상, 16글자 이하만 이용 가능합니다.');
-            document.getElementById('pw').value='';
-        }
-        for(var i=0;i<SC.length;i++){
-            if(pw.indexOf(SC[i]) != -1){
-                check_SC = 1;
-            }
-        }
-        if(check_SC == 0){
-            window.alert('!,@,#,$,%,*의 특수문자가 들어가 있지 않습니다.')
-            document.getElementById('pw').value='';
-        }
-        if(document.getElementById('pw').value !='' && document.getElementById('pw2').value!=''){
-            if(document.getElementById('pw').value==document.getElementById('pw2').value){
-                target.style.borderBottom = "3px solid black";
-                target2.style.borderBottom = "3px solid black";
-                document.getElementById('check').innerHTML='비밀번호가 일치합니다.'
-                document.getElementById('check').style.color='black';
-                
-                await fetch("https://port-0-hi-backend-1b5xkk2fldr011vx.gksl2.cloudtype.app/send-email/send", {
-                    method: 'POST',
-                    mode: 'cors',
-                    body: JSON.stringify({
-                        email: emailValue,
-                    }),
-                    headers:{
-                    "Content-type": "application/json"
-                    },  
-                })
+    let pw = document.getElementById('pw').value;
+    let SC = ["!","@","#","$","%", "*"];
+    let check_SC = 0;
 
-                /* modal open */
-                const open = () => {
-                    document.querySelector(".modal").classList.remove("hidden");
-                }
-                
-                const close = () => {
-                    document.querySelector(".modal").classList.add("hidden");
-                }
-                
-                document.querySelector(".openBtn").addEventListener("click", open);
-                document.querySelector(".closeBtn").addEventListener("click", close);
-                document.querySelector(".bg").addEventListener("click", close);
-
-            }
-            else{
-                target.style.borderBottom = "3px solid red";
-                target2.style.borderBottom = "3px solid red";
-                document.getElementById('check').innerHTML='비밀번호가 일치하지 않습니다.';
-                document.getElementById('check').style.color='red';
-            }
+    if(pw.length < 8 || pw.length > 16){
+        window.alert('비밀번호는 8글자 이상, 16글자 이하만 이용 가능합니다.');
+        document.getElementById('pw').value='';
+    }
+    for(var i=0;i<SC.length;i++){
+        if(pw.indexOf(SC[i]) != -1){
+            check_SC = 1;
         }
     }
+    if(check_SC == 0){
+        window.alert('!,@,#,$,%,*의 특수문자가 들어가 있지 않습니다.')
+        document.getElementById('pw').value='';
+    }
+    if(document.getElementById('pw').value !='' && document.getElementById('pw2').value!=''){
+        if(document.getElementById('pw').value==document.getElementById('pw2').value){
+            target.style.borderBottom = "3px solid black";
+            target2.style.borderBottom = "3px solid black";
+            document.getElementById('check').innerHTML='비밀번호가 일치합니다.'
+            document.getElementById('check').style.color='black';
+            
+            /* modal open */
+            const open = () => {
+                document.querySelector(".modal").classList.remove("hidden");
+            }
+            
+            const close = () => {
+                document.querySelector(".modal").classList.add("hidden");
+            }
+            
+            document.querySelector(".openBtn").addEventListener("click", open);
+            document.querySelector(".closeBtn").addEventListener("click", close); 
+            
+            await fetch("https://port-0-hi-backend-1b5xkk2fldr011vx.gksl2.cloudtype.app/send-email/send", {
+                method: 'POST',
+                mode: 'cors',
+                body: JSON.stringify({
+                    email: emailValue,
+                }),
+                headers:{
+                    "Content-type": "application/json"
+                },  
+            })
+            
+        }
+        else{
+            target.style.borderBottom = "3px solid red";
+            target2.style.borderBottom = "3px solid red";
+            document.getElementById('check').innerHTML='비밀번호가 일치하지 않습니다.';
+            document.getElementById('check').style.color='red';
+        }
+    }
+}
 
+async function retry() {
+    await fetch("https://port-0-hi-backend-1b5xkk2fldr011vx.gksl2.cloudtype.app/send-email/send", {
+        method: 'POST',
+        mode: 'cors',
+        body: JSON.stringify({
+            email: emailValue,
+        }),
+        headers:{
+            "Content-type": "application/json"
+        },  
+    })
+    
+}
 
+function join () {
+    var checkNum = num1 + num2 + num3 + num4;
+    console.log(checkNum)
+    document.querySelector(".bg").addEventListener("click", close);
+}
 
 /* modal number check */
 const onChange = (event) => {
@@ -116,5 +133,3 @@ let num1 = document.querySelector(".num1").addEventListener("change", onChange);
 let num2 = document.querySelector(".num2").addEventListener("change", onChange);
 let num3 = document.querySelector(".num3").addEventListener("change", onChange);
 let num4 = document.querySelector(".num4").addEventListener("change", onChange);
-
-
