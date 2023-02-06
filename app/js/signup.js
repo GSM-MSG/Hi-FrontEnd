@@ -10,6 +10,12 @@ function CheckId(str)
     }
 }
 
+let inputValue, emailValue;
+function inputValueChange () {
+    inputValue = document.getElementById('id').value;
+    emailValue = inputValue + "@gsm.hs.kr";
+}
+
 function GoToEnroll()
 {
 
@@ -33,7 +39,7 @@ function GoToEnroll()
     let target = document.getElementById("pw");
     let target2 = document.getElementById("pw2");
 
-    function check_pw(){
+    async function check_pw(){
     
         let pw = document.getElementById('pw').value;
         let SC = ["!","@","#","$","%", "*"];
@@ -58,6 +64,31 @@ function GoToEnroll()
                 target2.style.borderBottom = "3px solid black";
                 document.getElementById('check').innerHTML='비밀번호가 일치합니다.'
                 document.getElementById('check').style.color='black';
+                
+                await fetch("https://port-0-hi-backend-1b5xkk2fldr011vx.gksl2.cloudtype.app/send-email/send", {
+                    method: 'POST',
+                    mode: 'cors',
+                    body: JSON.stringify({
+                        email: emailValue,
+                    }),
+                    headers:{
+                    "Content-type": "application/json"
+                    },  
+                })
+
+                /* modal open */
+                const open = () => {
+                    document.querySelector(".modal").classList.remove("hidden");
+                }
+                
+                const close = () => {
+                    document.querySelector(".modal").classList.add("hidden");
+                }
+                
+                document.querySelector(".openBtn").addEventListener("click", open);
+                document.querySelector(".closeBtn").addEventListener("click", close);
+                document.querySelector(".bg").addEventListener("click", close);
+
             }
             else{
                 target.style.borderBottom = "3px solid red";
@@ -68,19 +99,6 @@ function GoToEnroll()
         }
     }
 
-
-/* modal open */
-const open = () => {
-    document.querySelector(".modal").classList.remove("hidden");
-}
-
-const close = () => {
-    document.querySelector(".modal").classList.add("hidden");
-}
-
-document.querySelector(".openBtn").addEventListener("click", open);
-document.querySelector(".closeBtn").addEventListener("click", close);
-document.querySelector(".bg").addEventListener("click", close);
 
 
 /* modal number check */
