@@ -77,17 +77,16 @@ async function check_pw(){
             document.querySelector(".openBtn").addEventListener("click", open);
             document.querySelector(".closeBtn").addEventListener("click", close); 
             
-            await fetch("https://port-0-hi-backend-1b5xkk2fldr011vx.gksl2.cloudtype.app/send-email/send", {
+            await fetch("https://port-0-hi-backend-1b5xkk2fldr011vx.gksl2.cloudtype.app/email/send", {
                 method: 'POST',
                 mode: 'cors',
                 body: JSON.stringify({
                     email: emailValue,
                 }),
-                headers:{
-                    "Content-type": "application/json"
-                },  
+                // headers:{
+                //     "Content-type": "application/json"
+                // },
             })
-            
         }
         else{
             target.style.borderBottom = "3px solid red";
@@ -99,15 +98,15 @@ async function check_pw(){
 }
 
 async function retry() {
-    await fetch("https://port-0-hi-backend-1b5xkk2fldr011vx.gksl2.cloudtype.app/send-email/send", {
+    await fetch("https://port-0-hi-backend-1b5xkk2fldr011vx.gksl2.cloudtype.app/email/send", {
         method: 'POST',
         mode: 'cors',
         body: JSON.stringify({
             email: emailValue,
         }),
-        headers:{
-            "Content-type": "application/json"
-        },  
+        // headers:{
+        //     "Content-type": "application/json"
+        // },  
     })
     
 }
