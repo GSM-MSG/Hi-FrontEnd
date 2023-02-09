@@ -79,13 +79,13 @@ async function check_pw(){
             
             await fetch("https://port-0-hi-backend-1b5xkk2fldr011vx.gksl2.cloudtype.app/email/send", {
                 method: 'POST',
-                mode: 'cors',
+                // mode: 'cors',
                 body: JSON.stringify({
                     email: emailValue,
                 }),
-                // headers:{
-                //     "Content-type": "application/json"
-                // },
+                headers:{
+                    "Content-type": "application/json"
+                },
             })
         }
         else{
@@ -98,15 +98,15 @@ async function check_pw(){
 }
 
 async function retry() {
-    await fetch("https://port-0-hi-backend-1b5xkk2fldr011vx.gksl2.cloudtype.app/email/send", {
+    await fetch("https://de09-116-45-231-15.jp.ngrok.io/email/send", {
         method: 'POST',
-        mode: 'cors',
+        // mode: 'cors',
         body: JSON.stringify({
             email: emailValue,
         }),
-        // headers:{
-        //     "Content-type": "application/json"
-        // },  
+        headers:{
+            "Content-type": "application/json"
+        },  
     })
     
 }
