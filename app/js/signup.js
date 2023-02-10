@@ -77,15 +77,19 @@ async function check_pw(){
             document.querySelector(".openBtn").addEventListener("click", open);
             document.querySelector(".closeBtn").addEventListener("click", close); 
             
-            await fetch("https://port-0-hi-backend-1b5xkk2fldr011vx.gksl2.cloudtype.app/email/send", {
+            fetch("https://port-0-hi-backend-1b5xkk2fldr011vx.gksl2.cloudtype.app/email/send", {
                 method: 'POST',
-                // mode: 'cors',
                 body: JSON.stringify({
                     email: emailValue,
                 }),
                 headers:{
-                    "Content-type": "application/json"
+                    "Access-Control-Allow-Origin": "https://port-0-hi-backend-1b5xkk2fldr011vx.gksl2.cloudtype.app",
+                    "Content-Type": "application/json",
+                    "Access-Control-Allow-Methods": "GET,PUT,POST,PATCH,DELETE,OPTIONS,REQUEST",
+                    "Access-Control-Allow-Headers": "Content-Type, Authorization, Content-Length, X-Requested-With, Accept",
+                    // "Access-Control-Allow-Credentials": "true",
                 },
+                credentials: 'include'
             })
         }
         else{
