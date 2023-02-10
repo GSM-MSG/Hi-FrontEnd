@@ -74,6 +74,7 @@ async function check_pw(){
                 document.querySelector(".modal").classList.add("hidden");
             }
             
+            document.querySelector(".bg").addEventListener("click", close);
             document.querySelector(".openBtn").addEventListener("click", open);
             document.querySelector(".closeBtn").addEventListener("click", close); 
             
@@ -102,28 +103,30 @@ async function check_pw(){
 }
 
 async function retry() {
-    await fetch("https://de09-116-45-231-15.jp.ngrok.io/email/send", {
-        method: 'POST',
-        // mode: 'cors',
-        body: JSON.stringify({
-            email: emailValue,
-        }),
-        headers:{
-            "Content-type": "application/json"
-        },  
-    })
+    fetch("https://port-0-hi-backend-1b5xkk2fldr011vx.gksl2.cloudtype.app/email/send", {
+                method: 'POST',
+                body: JSON.stringify({
+                    email: emailValue,
+                }),
+                headers:{
+                    "Access-Control-Allow-Origin": "https://port-0-hi-backend-1b5xkk2fldr011vx.gksl2.cloudtype.app",
+                    "Content-Type": "application/json",
+                    "Access-Control-Allow-Methods": "GET,PUT,POST,PATCH,DELETE,OPTIONS,REQUEST",
+                    "Access-Control-Allow-Headers": "Content-Type, Authorization, Content-Length, X-Requested-With, Accept",
+                    // "Access-Control-Allow-Credentials": "true",
+                },
+                credentials: 'include'
+            })
     
 }
 
-function join () {
-    var checkNum = num1 + num2 + num3 + num4;
-    console.log(checkNum)
-    document.querySelector(".bg").addEventListener("click", close);
-}
+let checkNumFinal = "";
+
 
 /* modal number check */
 const onChange = (event) => {
     console.log(event.target.value)
+    checkNumFinal = checkNumFinal + event.target.value;
     if(event.target.value >= 0 && event.target.value <= 9) {
         event.target.style.border = "1px solid #FFDF9A"
         event.target.style.backgroundColor = "#fff"
@@ -136,3 +139,22 @@ let num1 = document.querySelector(".num1").addEventListener("change", onChange);
 let num2 = document.querySelector(".num2").addEventListener("change", onChange);
 let num3 = document.querySelector(".num3").addEventListener("change", onChange);
 let num4 = document.querySelector(".num4").addEventListener("change", onChange);
+
+function join () {
+    fetch("https://port-0-hi-backend-1b5xkk2fldr011vx.gksl2.cloudtype.app/email/send", {
+        method: 'HEAD',
+        body: JSON.stringify({
+            email: emailValue,
+            authKey: checkNumFinal,
+        }),
+        headers:{
+            "Access-Control-Allow-Origin": "https://port-0-hi-backend-1b5xkk2fldr011vx.gksl2.cloudtype.app",
+            "Content-Type": "application/json",
+            "Access-Control-Allow-Methods": "GET,PUT,POST,PATCH,DELETE,OPTIONS,REQUEST",
+            "Access-Control-Allow-Headers": "Content-Type, Authorization, Content-Length, X-Requested-With, Accept",
+            // "Access-Control-Allow-Credentials": "true",
+        },
+        credentials: 'include'
+    })
+    console.log(checkNumFinal);
+}
