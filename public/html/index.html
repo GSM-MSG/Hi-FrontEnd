@@ -58,10 +58,10 @@
           </div>
           <div class="input-text">
             <label for="id">@gsm.hs.kr</label>
-            <input class="underline" id="id" type="text" maxlength="6" placeholder="아이디" />
+            <input onchange="inputId()" class="underline" id="id" type="text" maxlength="6" placeholder="아이디" />
           </div>
           <div class="input-password">
-            <input class="underline" type="password" maxlength="18" placeholder="비밀번호" />
+            <input onchange="inputPassword()" class="underline" id="password" type="password" maxlength="18" placeholder="비밀번호" />
           </div>
           <button OnClick = "javascript:GoToEnroll()">로그인</button>
           <div class="signup-text">
