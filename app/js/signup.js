@@ -158,3 +158,6 @@ function join () {
     })
     console.log(checkNumFinal);
 }
+
+
+// IMPORMATION

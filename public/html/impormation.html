@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hi</title>
 
     <!-- Open graph -->
@@ -44,60 +43,26 @@
     <!--Google Material Icons-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
 
-    <link rel="stylesheet" href="/public/css/signup.css" />
+    <link rel="stylesheet" href="/public/css/login.css" />
+
     <script defer src="/app/js/signup.js"></script>
 
 </head>
 <body>
 
-    <div class="inner">
+    <!-- Login Section -->
+      <div class="inner">
         <div class="login-box">
           <div class="login-text">
             <h1>SIGN UP</h1>
           </div>
           <div class="input-text">
-            <label for="id">@gsm.hs.kr</label>
-            <input onchange="inputValueChange()" class="underline" id="id" type="text" maxlength="6" placeholder="아이디" />
+            <input onchange="inputId()" class="underline" id="id" type="text" maxlength="6" placeholder="학번" />
           </div>
           <div class="input-password">
-            <input class="underline" type="password" name="userPW" id="pw" onchange="check_pw()" maxlength="18" placeholder="비밀번호" />
+            <input onchange="inputPassword()" class="underline" id="password" type="password" maxlength="18" placeholder="이름" />
           </div>
-          <div class="input-password">
-            <input class="underline" type="password" name="userPW2" id="pw2" onchange="check_pw()" maxlength="18" placeholder="비밀번호 확인" />
-          </div>
-          <div class="password-check">
-            <span id="check"></span>
-          </div>
-          <button OnClick = "javascript:GoToEnroll()" class="openBtn">다음으로</button>
-
-          <!-- modalBox -->
-          <div class="modal hidden">
-            <div class="bg"></div>
-            <div class="modalBox">
-              <div class="check-text">
-                <h1>인증번호 확인</h1>
-              </div>
-              <div class="sub-text">
-                <p>알려주신 이메일로 인증번호를 보냈어요!</p>
-              </div>
-              <div class="number-check">
-                <input type="text" maxlength='1' id="number" class="border-line num1" />
-                <input type="text" maxlength="1" id="number" class="border-line num2" />
-                <input type="text" maxlength="1" id="number" class="border-line num3" />
-                <input type="text" maxlength="1" id="number" class="border-line num4" />
-              </div>
-              <button onclick="join()" class="closeBtn">확인 </button>
-              <div class="resend-text">
-                <a class="cant-text">인증번호를 받지 못했나요?</a>
-                <a href="javascript:void(0)" class="text-hyper" onclick="retry()">재발송</a>
-              </div>
-            </div>
-
-          </div>
-          <div class="signup-text">
-            <a class="sub-text">계정이 있으신가요?</a>
-            <a href="/public/html/index.html" class="text-hyper">로그인</a>
-          </div>
+          <button OnClick = "javascript:GoToEnroll()">회원가입</button>
         </div>
       </div>
 
