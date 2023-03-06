@@ -18,7 +18,6 @@ function inputValueChange () {
 
 function GoToEnroll()
 {
-
 	let obId = document.getElementById("id");
 	if (!obId.value) {
 		alert("아이디을 입력해주십시오.");
@@ -161,3 +160,64 @@ function join () {
 
 
 // IMPORMATION
+function CheckNum(str)
+{
+	let reg_num = /[1-3][1-4][0-1][0-9]/;
+    if(!reg_num.test(str)) {
+        return false;
+    }
+    else {
+        return true;
+    }
+}
+function GoToEnroll()
+{
+	let obNum = document.getElementById("num");
+	if (!obNum.value) {
+		alert("학번을 입력해주십시오.");
+		obNum.focus();
+		return;
+	}
+	else {
+		if(!CheckNum(obNum.value)){
+			alert("학번 형식이 잘못되었습니다.");
+			obNum.focus();
+			return;
+		}
+	}
+}
+
+function CheckName(str)
+{
+	let reg_name = /^[가-힣]{2,4}$/;
+    if(!reg_name.test(str)) {
+        return false;
+    }
+    else {
+        return true;
+    }
+}
+function GoToEnroll()
+{
+	let obName = document.getElementById("name");
+	if (!obName.value) {
+		alert("이름을 입력해주십시오.");
+		obName.focus();
+		return;
+	}
+	else {
+		if(!CheckName(obName.value)){
+			alert("이름 형식이 잘못되었습니다.");
+			obName.focus();
+			return;
+		}
+	}
+}
+
+let studentNum, studentName;
+function inputNum () {
+    studentNum = document.getElementById("num").value;
+}
+function inputName () {
+    studentName = document.getElementById("name").value;
+}
